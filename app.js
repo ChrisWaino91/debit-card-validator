@@ -20,10 +20,10 @@ const mastercardLogo = document.getElementById('mastercard-logo');
 const amexLogo = document.getElementById('amex-logo'); 
 
 
-// Set the function that will load the event listeners
+// Set the function that will load the event listeners. This could be done together but done separately for learning purposes.
 loadEventListeners();
 
-// Listen for relavnt events
+// Listen for relevant events
 function loadEventListeners(){
   cardInput.addEventListener('input', setCard);
   nameInput.addEventListener('input', setName);
@@ -34,6 +34,7 @@ function loadEventListeners(){
   cvvInput.addEventListener('blur', formatCvv);
 }
 
+// Check local storage for a stored Full Name and set it to the nameInput.value if so
 document.addEventListener("DOMContentLoaded", function() {
   let storedName = localStorage.getItem('storedName');
     nameInput.value = storedName;
@@ -49,7 +50,7 @@ function setCard(){
     }
   }
 
-// Set the full name on the card to the same of the input in the form and revert to placeholder if empty
+// Set the full name on the card to the same of the input in the form and revert to placeholder if empty. Commit to LS once set.
 function setName(){
     fullName.innerHTML = nameInput.value;
     console.log(fullName.innerHTML);
@@ -59,7 +60,7 @@ function setName(){
     }
   }
 
-// Set the expiry date on the card to the same value on the input in the form and revert to placeholer if emtpy
+// Set the expiry date on the card to the same value on the input in the form and revert to placeholer if empty
   function setExpiry(){
     expiryDate.innerHTML = expiryInput.value;
     if(expiryInput.value === ''){
