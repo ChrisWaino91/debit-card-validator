@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Card Validation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <style>
+  .card-logo {visibility: hidden;} 
+  .card-logo img{width:50px;}
+  .visa-card {background: linear-gradient(138deg, rgba(25,156,215,1) 0%, rgba(29,56,134,1) 100%) !important;}
+  .mastercard-card {background: linear-gradient(138deg, rgba(163, 164, 166, 1) 0%, rgba(167, 168, 170, 1) 100%) !important;}
+  .amex-card {background: linear-gradient(138deg, rgba(50, 49, 47, 1) 0%, rgba(101, 101, 101, 1) 100%) !important;}
+  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {display:none;}
+
+  </style>
+  <body>
+    <div class="container" style="font-family: roboto;">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <h1>Credit/Debit Card Validation</h1>
+
+          <div class="card" id="card-container" style="padding-top: 10px; padding-left: 35px; width:350px; height:200px; background:#f3f3f3; margin:50px auto; border-radius:10px;">
+            <div class="logo" style="text-align: right; margin-right: 15px;">
+              <span class="visa-logo card-logo" id="visa-logo" style="position: relative; left: 108px;"><img src="/visa.png" /></span>
+              <span class="mastercard-logo card-logo" id="mastercard-logo" style="position:relative; left: 54px;"><img src="/mastercard.png" /></span>
+              <span class="amex-logo card-logo" id="amex-logo"><img src="/amex.png" /></span>
+            </div>
+            <div class="chip" style="opacity: .8; color:#d6d6d6;">
+                <i class="fas fa-sd-card fa-rotate-90 fa-2x"></i>
+            </div>
+            <div class="card-number" id="card-number" style="color:white; font-size: 24px; letter-spacing: 3px;">
+              •••• •••• •••• ••••
+            </div>
+            <span class="full-name" id="full-name" style="height: 50px; overflow:hidden; width: 200px; display:inline; margin-top: 10px; text-transform: uppercase; font-weight: 900; color: white; letter-spacing: 1.5px;">
+              Full Name
+            </span>
+            <span class="expiry-date" id="expiry-date" style="width: 75px; position: absolute; bottom: 34px; right: 25px; color:white;">
+            MM/YY
+            </span>
+
+          </div>
+
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="card" placeholder="Card Number" maxlength="19">
+              <div class="invalid-feedback" id="card-invalid-feedback">
+                Please Enter a Valid Credit/Debit Card Number
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" placeholder="Full Name">
+              <div class="invalid-feedback" id="name-invalid-feedback">
+                Please Enter Your Full Name
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="expiry" placeholder="MM/YY" maxlength="5">
+              <div class="invalid-feedback" id="expiry-invalid-feedback">
+                Please Enter a Valid Expiry Date
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="cvv" placeholder="CVV" maxlength="4">
+              <div class="invalid-feedback" id="cvv-invalid-feedback">
+               Please Enter a Valid CVV Value
+              </div>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="storage.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+
+  </body>
+</html>
