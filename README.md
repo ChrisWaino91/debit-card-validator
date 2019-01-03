@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+Access to Actual App: https://chriswaino91.github.io/debit-card-validator/
 
-You can use the [editor on GitHub](https://github.com/ChrisWaino91/debit-card-validator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+Features of this include;
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- card number will be painted on the card UI while it is being input
+- card ui will be painted and branded a specific colour based on the bin range (first digit) being input by the user
+- card number will only accept 15 (if the card is in the Amex bin range) and 16 digit (Visa / MC bin ranges) numerical inputs 
+- if the user inputs the card number without any spaces, it will space the full card number accordinly; 4/4/4/4 for Visa/MC or 4/6/5 for Amex
+- if the user inputs the card WITH spaces already, this will just be painted to the card UI as is 
+- full name will be painted to the card UI
+- full name will be set to local storage once it has been input (on keyup)
+- full name will be retrieved from LS on DOM Load
+- date will be painted with a "/" if not input by the user and just painted as input otherwise.
+- date will not look for a valid date to ensure that is not in the page - this is just a text input but could be added using the Date object instead
+- CVV value will not be painted to the UI - it would be on the back
+- CVV value must be alpha and either three or four digits long
+- if an Amex card has been selected, then the CVV will need to be four digits long - otherwise it will error
+- if a Visa / MC has been input, then the CVV must be three digits long otherwise it will error
+- if the user enters a CVV value first, for some reason, the cvv field will not error on a 3/4 basis until a card number has been selected
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ChrisWaino91/debit-card-validator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I haven't strenously tested this. 
