@@ -13,7 +13,7 @@ Features of this include;
 - full name will be set to local storage once it has been input (on keyup)
 - full name will be retrieved from LS on DOM Load
 - date will be painted with a "/" if not input by the user and just painted as input otherwise.
-- date will not look for a valid date to ensure that is not in the page - this is just a text input but could be added using the Date object instead
+- date will not look for a valid date to ensure that is not in the past - this is just a text input but could be added using the Date object instead
 - CVV value will not be painted to the UI - it would be on the back
 - CVV value must be alpha and either three or four digits long
 - if an Amex card has been selected, then the CVV will need to be four digits long - otherwise it will error
