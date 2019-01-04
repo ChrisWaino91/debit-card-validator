@@ -15,7 +15,7 @@ Features of this include;
 - date will be painted with a "/" if not input by the user and just painted as input otherwise.
 - date will not look for a valid date to ensure that is not in the past - this is just a text input but could be added using the Date object instead
 - CVV value will not be painted to the UI - it would be on the back
-- CVV value must be alpha and either three or four digits long
+- CVV value must be numeric and either three or four digits long
 - if an Amex card has been selected, then the CVV will need to be four digits long - otherwise it will error
 - if a Visa / MC has been input, then the CVV must be three digits long otherwise it will error
 - if the user enters a CVV value first, for some reason, the cvv field will not error on a 3/4 basis until a card number has been selected
